@@ -20,19 +20,19 @@
 
 ## 📸 Hình ảnh trong game
 
-![alt text](image.png)
+![](1.png)
 
 ### 1\. Màn hình chính
 
-![alt text](image-1.png)
+![](2.png)
 
 ### 2\. Gameplay
 
-![alt text](image-2.png)
+![](3.png)
 
 ### 3\. Màn hình kết thúc
 
-![alt text](image-3.png)
+![](4.png)
 
 -----
 
