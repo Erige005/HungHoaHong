@@ -4,36 +4,35 @@
 
 **Hứng Hoa Hồng** là một trò chơi điện tử thuộc thể loại "Catching Game" (Hứng vật rơi) được phát triển trên **Godot Engine**.
 
-Đây không chỉ là một dự án game thông thường, mà là một sản phẩm được thiết kế với mục đích "thanh lịch hóa" những câu chuyện hài hước trong quá khứ và là một lời mời đặc biệt dành cho một người bạn.
-
+Đây không chỉ là một dự án game thông thường, mà là một sản phẩm được thiết kế với mục đích "thanh lịch hóa" những câu chuyện hài hước trong quá khứ.
 ## ✨ Tính năng nổi bật
 
   * **Lối chơi đơn giản, cuốn hút:** Sử dụng chuột để điều khiển nhân vật/giỏ hứng những bông hoa hồng đang rơi từ trên cao.
-  * **Cơ chế đặc biệt:** Kết quả của trò chơi sẽ dẫn đến một "phần thưởng" bất ngờ (Lời mời đi chơi).
+  * **Cơ chế đặc biệt:** Kết quả của trò chơi sẽ dẫn đến một "phần thưởng" bất ngờ.
   * **Hiệu ứng & Âm thanh:** (Bạn có thể thêm mô tả về nhạc nền hoặc hiệu ứng nếu có).
   * **Đa nền tảng:** Hỗ trợ xuất file thực thi (.exe) chạy mượt mà trên Windows.
 
 ## 🛠 Công nghệ sử dụng
 
-  * **Engine:** [Godot Engine](https://godotengine.org/) (Phiên bản của bạn, ví dụ: 4.x).
+  * **Engine:** [Godot Engine](https://godotengine.org/).
   * **Ngôn ngữ:** GDScript.
-  * **Assets:** (Kể tên các công cụ bạn dùng làm ảnh/âm thanh như Photoshop, Aseprite...).
+  * **Assets:** Google.
 
 ## 📸 Hình ảnh trong game
 
-> *Mẹo: Bạn nên chụp màn hình lúc hoa hồng đang rơi và màn hình "Win" để khoe nhé\!*
+![alt text](image.png)
 
-### 1\. Màn hình chính (Main Menu)
+### 1\. Màn hình chính
 
-*Mô tả: Giao diện khởi đầu của game.*
+![alt text](image-1.png)
 
-### 2\. Gameplay (Trận chiến hứng hoa)
+### 2\. Gameplay
 
-*Mô tả: Những bông hoa hồng rơi đầy lãng mạn cần được hứng trọn.*
+![alt text](image-2.png)
 
-### 3\. Màn hình kết thúc (The "Invitation")
+### 3\. Màn hình kết thúc
 
-*Mô tả: Khoảnh khắc quyết định - Lời mời đi chơi xuất hiện.*
+![alt text](image-3.png)
 
 -----
 
@@ -41,12 +40,11 @@
 
 ### Cách chơi
 
-1.  Tải file `HungHoaHong.exe` trong phần [Releases](https://www.google.com/search?q=link-den-release-neu-co).
+1.  Tải file `HungHoaHong.exe` trong phần [Releases](https://github.com/Erige005/HungHoaHong/releases/tag/1.0).
 2.  Mở game và sử dụng chuột để di chuyển giỏ hứng.
 3.  Hứng đủ số lượng hoa để nhận được "thông điệp bí mật".
 
-### Dành cho nhà phát triển (Chạy source code)
-
+### Dành cho nhà phát triển
 1.  Cài đặt Godot Engine.
 2.  Clone repository này:
     ```bash
@@ -58,9 +56,9 @@
 
 ## 💡 Ý tưởng dự án
 
-Dự án được thực hiện nhằm mang lại niềm vui và sự bất ngờ. Mọi bông hoa hứng được đều đại diện cho một sự chân thành (và một cái hẹn đi cafe/ăn uống).
+Dự án được thực hiện nhằm mang lại niềm vui và sự bất ngờ. Mọi bông hoa hứng được đều đại diện cho một sự chân thành.
 
 ## 👤 Tác giả
 
-  * **Developer:** [Erige005](https://www.google.com/search?q=https://github.com/Erige005)
-  * **Mục đích:** Quà tặng & Kỷ niệm.
+  * **Developer:** [Erige005](https://github.com/Erige005)
+  * **Mục đích:** Quà tặng & Kỷ niệm.   
