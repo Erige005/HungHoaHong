@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://bsklsbwnyk75k"]
+
+[ext_resource type="Script" uid="uid://cjc4k5cxmnxm7" path="res://thanh_tuu.gd" id="1_pqwpj"]
+[ext_resource type="FontFile" uid="uid://sg58fd4qux4k" path="res://SF Pixelate Bold.ttf" id="2_bjc1a"]
+[ext_resource type="AudioStream" uid="uid://btgitbk5phdst" path="res://ui_click.mp3" id="2_qn6yh"]
+
+[node name="ThanhTuu" type="Control" unique_id=2113553238]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pqwpj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=663013552]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(29.019426, 16.369864)
+color = Color(0.18950063, 0.32934397, 0.31832242, 1)
+
+[node name="Khung4Moc" type="HBoxContainer" parent="." unique_id=639456132]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -204.0
+offset_right = 500.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BtnMoc1" type="Button" parent="Khung4Moc" unique_id=1838789381]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_bjc1a")
+theme_override_font_sizes/font_size = 30
+text = "Mốc 1"
+
+[node name="BtnMoc2" type="Button" parent="Khung4Moc" unique_id=1403062568]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_bjc1a")
+theme_override_font_sizes/font_size = 30
+text = "Mốc 2"
+
+[node name="BtnMoc3" type="Button" parent="Khung4Moc" unique_id=1283300451]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_bjc1a")
+theme_override_font_sizes/font_size = 30
+text = "Mốc 3"
+
+[node name="BtnMoc4" type="Button" parent="Khung4Moc" unique_id=1883790569]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_bjc1a")
+theme_override_font_sizes/font_size = 30
+text = "Mốc 4"
+
+[node name="HopThoaiXacNhan" type="ConfirmationDialog" parent="." unique_id=1565599946]
+oversampling_override = 1.0
+title = "Xác nhận"
+position = Vector2i(0, 36)
+size = Vector2i(458, 100)
+visible = true
+dialog_text = "\"Bạn có muốn dùng 500 hoa để mở khóa mốc này không?"
+
+[node name="PopupPhanThuong" type="Panel" parent="." unique_id=817100458]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 20.0
+offset_right = 876.0
+offset_bottom = 620.0
+
+[node name="ImgThuong" type="TextureRect" parent="PopupPhanThuong" unique_id=1487013524]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 580.0
+offset_bottom = 500.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BtnDong" type="Button" parent="PopupPhanThuong" unique_id=1318507013]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 520.0
+offset_right = 400.0
+offset_bottom = 580.0
+theme_override_fonts/font = ExtResource("2_bjc1a")
+text = "Đóng"
+
+[node name="BtnQuayLai" type="Button" parent="." unique_id=161134716]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 170.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0.99999994, 0.87064046, 0.30825675, 1)
+theme_override_fonts/font = ExtResource("2_bjc1a")
+text = "Quay lại"
+
+[node name="SfxClickAchieve" type="AudioStreamPlayer" parent="." unique_id=1947991394]
+process_mode = 3
+stream = ExtResource("2_qn6yh")
+volume_db = -5.0
+
+[connection signal="pressed" from="Khung4Moc/BtnMoc1" to="." method="_on_btn_moc_1_pressed"]
+[connection signal="pressed" from="Khung4Moc/BtnMoc2" to="." method="_on_btn_moc_2_pressed"]
+[connection signal="pressed" from="Khung4Moc/BtnMoc3" to="." method="_on_btn_moc_3_pressed"]
+[connection signal="pressed" from="Khung4Moc/BtnMoc4" to="." method="_on_btn_moc_4_pressed"]
+[connection signal="confirmed" from="HopThoaiXacNhan" to="." method="_on_hop_thoai_xac_nhan_confirmed"]
+[connection signal="pressed" from="PopupPhanThuong/BtnDong" to="." method="_on_btn_dong_pressed"]
+[connection signal="pressed" from="BtnQuayLai" to="." method="_on_btn_quay_lai_pressed"]

@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://5jk8gywbq0q1"]
+
+[ext_resource type="Script" uid="uid://ccmmrbqkyt1t7" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="Texture2D" uid="uid://dcuu5hx5fqda" path="res://menu_background.png" id="2_ouk20"]
+[ext_resource type="FontFile" uid="uid://sg58fd4qux4k" path="res://SF Pixelate Bold.ttf" id="3_4hy44"]
+[ext_resource type="AudioStream" uid="uid://btgitbk5phdst" path="res://ui_click.mp3" id="3_mae5d"]
+
+[node name="MainMenu" type="Control" unique_id=821805239]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lti8b")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1368370078]
+scale = Vector2(0.5, 0.373)
+texture = ExtResource("2_ouk20")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=198324467]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -135.0
+offset_top = 123.0
+offset_right = 165.0
+offset_bottom = 224.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="BtnStart" type="Button" parent="VBoxContainer" unique_id=10170059]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4hy44")
+text = "Bắt Đầu Chơi"
+
+[node name="BtnAchieve" type="Button" parent="VBoxContainer" unique_id=1869024066]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4hy44")
+text = "Thành Tựu"
+
+[node name="BtnCredit" type="Button" parent="VBoxContainer" unique_id=241060715]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4hy44")
+text = "Credit"
+
+[node name="TotalRosesLabel" type="Label" parent="." unique_id=1776241607]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -510.0
+offset_top = -324.0
+offset_right = -343.0
+offset_bottom = -282.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0, 0.050980393, 1)
+theme_override_fonts/font = ExtResource("3_4hy44")
+theme_override_font_sizes/font_size = 30
+text = "Tổng hoa: 0"
+
+[node name="HighScoreLabel" type="Label" parent="." unique_id=1446614027]
+layout_mode = 1
+offset_left = 163.0
+offset_top = -324.0
+offset_right = 268.0
+offset_bottom = -282.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4hy44")
+theme_override_font_sizes/font_size = 30
+text = "Kỉ lục:"
+
+[node name="SfxClickMenu" type="AudioStreamPlayer" parent="." unique_id=2099989901]
+stream = ExtResource("3_mae5d")
+volume_db = -5.0
+
+[connection signal="pressed" from="VBoxContainer/BtnStart" to="." method="_on_btn_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/BtnAchieve" to="." method="_on_btn_achieve_pressed"]
+[connection signal="pressed" from="VBoxContainer/BtnCredit" to="." method="_on_btn_credit_pressed"]

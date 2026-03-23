@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://c3fvbotac5vum"]
+
+[ext_resource type="Script" uid="uid://dlsdp3freabxl" path="res://credit.gd" id="1_7q1b3"]
+
+[node name="CreditScreen" type="Control" unique_id=817040973]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7q1b3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1352274562]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.09019608, 0.8392157)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1477362455]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1361554471]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CreditText" type="RichTextLabel" parent="ScrollContainer/VBoxContainer" unique_id=472670902]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]
+[color=yellow][b]🌹 HỨNG HOA HỒNG 🌹[/b][/color]
+
+[color=yellow][b]THIẾT KẾ VÀ PHÁT TRIỂN[/b][/color]
+Đạo diễn Game: nam
+Lập trình viên chính: Gemini
+Thiết kế thuật toán Spawner: Gemini
+
+[color=yellow][b]ĐỒ HỌA VÀ GIAO DIỆN[/b][/color]
+Thiết kế Pixel Art: vecteezy.com
+Thiết kế Giao diện: nam
+Hiệu ứng hạt & Văn bản nổi: nam
+
+[color=yellow][b]ÂM THANH VÀ NHẠC NỀN[/b][/color]
+Nhạc nền Menu: Chill - MondaMusic
+Môi trường Sóng biển: Ocean Waves - DRAGON-STUDIO
+Hiệu ứng Âm thanh: Freesound.org
+Tích hợp Âm thanh: nam
+
+[color=yellow][b]CÔNG NGHỆ VÀ CÔNG CỤ[/b][/color]
+Game Engine: Phát triển bằng Godot Engine 4
+Kiểu chữ: SF Pixelate - DaFont
+Hỗ trợ Code & AI: Gemini AI
+
+[color=yellow][b]KIỂM THỬ VÀ CÂN BẰNG[/b][/color]
+Trưởng bộ phận Kiểm thử: nam
+Kiểm tra độ khó: nam
+
+01111000 01101001 01101110 00100000 01101100 01101111 01101001 00100000 01101101 01100001 01111001 00100000 01101110 01101000 01100101
+
+01110100 01100001 01101111 00100000 01101101 01110101 01101111 01101110 00100000 01110100 01101000 01100001 01101110 00100000 01110100 01101000 01101001 01100101 01110100 00100000 01110110 01101111 01101001 00100000 01101101 01100001 01111001 00100000 01101000 01101111 01101110
+
+© 2026 erige. All Rights Reserved.
+[/center]
+"
+fit_content = true
+
+[node name="BtnBack" type="Button" parent="." unique_id=930394643]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Quay lại"
+
+[node name="SfxClickCredit" type="AudioStreamPlayer" parent="." unique_id=91769786]
+
+[connection signal="pressed" from="BtnBack" to="." method="_on_btn_back_pressed"]

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://by7qi74qn5yuy"]
+
+[ext_resource type="AudioStream" uid="uid://cl3qwavmjfa16" path="res://nhac_nen.mp3" id="1_dsy6a"]
+
+[node name="NhacNenToanCuc" type="AudioStreamPlayer" unique_id=445572092]
+stream = ExtResource("1_dsy6a")
+volume_db = -10.0
+autoplay = true

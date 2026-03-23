@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dh4ajjy33ktpn"]
+
+[ext_resource type="Script" uid="uid://coxewmwccdvbn" path="res://achievements.gd" id="1_nr1wc"]
+
+[node name="Achievements" type="Control" unique_id=1257380533]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nr1wc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=219130281]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16062862, 0.16062862, 0.16062862, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1246481537]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer" unique_id=86638337]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "THÀNH TỰU"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=219739475]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Đang phát triển..."
+horizontal_alignment = 1
+
+[node name="BtnBack" type="Button" parent="VBoxContainer" unique_id=1777011312]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Quay lại"
+
+[connection signal="pressed" from="VBoxContainer/BtnBack" to="." method="_on_btn_back_pressed"]

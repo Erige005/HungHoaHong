@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://cbrauiiwi56pv"]
+
+[ext_resource type="Script" uid="uid://dg22mrij380t1" path="res://basket.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://de0pn3a5v1v3v" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://bhniqrw3werws" path="res://background4.jpg" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://diy0b5umpayo3" path="res://basket3.png" id="4_efxa6"]
+[ext_resource type="FontFile" uid="uid://sg58fd4qux4k" path="res://SF Pixelate Bold.ttf" id="5_efxa6"]
+[ext_resource type="AudioStream" uid="uid://jxqpysoocapl" path="res://an_hoa_tim.mp3" id="6_5vw27"]
+[ext_resource type="Texture2D" uid="uid://c576e8x55sdh4" path="res://pause_button.png" id="6_efxa6"]
+[ext_resource type="AudioStream" uid="uid://bmptyjq1u26jv" path="res://an_bom.mp3" id="7_kek77"]
+[ext_resource type="AudioStream" uid="uid://c0xhch2tgo8mi" path="res://chet.mp3" id="8_4c57u"]
+[ext_resource type="AudioStream" uid="uid://c4eioqywgltfk" path="res://missing.mp3" id="9_kek77"]
+[ext_resource type="AudioStream" uid="uid://btgitbk5phdst" path="res://ui_click.mp3" id="10_4c57u"]
+[ext_resource type="AudioStream" uid="uid://csexaeghgykxe" path="res://oceanwave.mp3" id="12_dg77c"]
+
+[node name="Main" type="Node2D" unique_id=1795717526]
+script = ExtResource("1_h2yge")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=2020305520]
+position = Vector2(575, 326)
+scale = Vector2(0.7195259, 0.54340184)
+texture = ExtResource("2_1bvp3")
+
+[node name="Basket" type="Area2D" parent="." unique_id=345987576]
+position = Vector2(566, 619)
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_0xm2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="Basket" unique_id=104146991]
+position = Vector2(4, -18)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("4_efxa6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Basket" unique_id=195580921]
+position = Vector2(4, -18)
+scale = Vector2(0.9, 0.9)
+polygon = PackedVector2Array(-28.5, -143.5, -28.5, -141.8, -46, -132.5, -50.299988, -132.5, -80.29999, -101.5, -81.70001, -101.5, -83.5, -98, -83.5, -91.6, -88.5, -88.6, -88.5, -80.4, -95.5, -74.4, -95.5, -64.5, -100.5, -60.5, -100.5, -35.800003, -123, -24.5, -125.5, -24.5, -131.5, -16.5, -133.5, -16.5, -133.5, -11.5, -134.5, -11.5, -134.5, 10.399994, -128.5, 15.399994, -128.5, 40.600006, -123.5, 43.600006, -123.5, 65.2, -117.5, 72.20001, -117.5, 84.29999, -111.5, 90.29999, -111.5, 97.29999, -107.3, 101.5, -106, 101.5, -104.5, 106.5, -104.5, 109.399994, -96.5, 116.29999, -96.5, 117.70001, -93, 119.5, -88.5, 119.5, -88.5, 121.70001, -81, 125.5, -72.5, 125.5, -72.5, 126.5, -80.20001, 132.5, -82.5, 132.5, -82.5, 141.6, -79.5, 143.6, -79.5, 145.79999, -63.200012, 143.5, -60.700012, 143.5, -52.799988, 136.5, -50.5, 136.5, -50.5, 130.5, -49.200012, 130.5, -42.399994, 136.29999, -45.5, 140.5, -48.5, 140.5, -43.799988, 151.5, 44.299988, 151.5, 48.5, 147.29999, 48.5, 142, 44.5, 135, 51, 129.79999, 55.299988, 130.5, 62.100006, 130.5, 72.29999, 123.70001, 80.399994, 124.5, 84.20001, 124.5, 102.20001, 110.5, 103.70001, 110.5, 106.5, 105, 106.5, 101.399994, 111.5, 97.5, 111.5, 89.600006, 117.5, 85.600006, 117.5, 72.600006, 121, 70.5, 123.5, 70.5, 123.5, 44.300003, 126.29999, 41.5, 128.5, 41.5, 128.5, 16.300003, 132.29999, 12.5, 134.6, 12.5, 133.5, -11.600006, 133.5, -15.399994, 125.5, -22.399994, 125.5, -23.899994, 120.79999, -25.5, 116.20001, -25.5, 109.20001, -31.5, 105.600006, -31.5, 102.600006, -36.5, 100.20001, -36.5, 99.5, -39.899994, 99.5, -61.6, 94.5, -64.6, 94.5, -77.2, 83.5, -92.2, 83.5, -99.3, 64.5, -118.3, 64.5, -119.4, 51.5, -130.5, 51.5, -131.9, 46.799988, -133.5, 41.100006, -133.5, 28.5, -141.7, 28.5, -143.5)
+
+[node name="Timer" type="Timer" parent="." unique_id=2138342678]
+autostart = true
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1785989018]
+process_mode = 3
+
+[node name="LivesLabel" type="Label" parent="UILayer" unique_id=1116897630]
+offset_left = 962.0
+offset_top = 1.0
+offset_right = 1114.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("5_efxa6")
+theme_override_font_sizes/font_size = 40
+text = "Mạng: 5"
+
+[node name="BtnPause" type="Button" parent="UILayer" unique_id=1428424239]
+offset_right = 60.0
+offset_bottom = 60.0
+scale = Vector2(0.14, 0.14)
+icon = ExtResource("6_efxa6")
+flat = true
+
+[node name="MenuBoard" type="ColorRect" parent="UILayer" unique_id=2099133592]
+visible = false
+offset_right = 1152.0
+offset_bottom = 650.0
+color = Color(0, 0, 0, 0.58431375)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UILayer/MenuBoard" unique_id=1832818283]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="MenuTitle" type="Label" parent="UILayer/MenuBoard/VBoxContainer" unique_id=196987807]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_efxa6")
+theme_override_font_sizes/font_size = 30
+text = "TẠM DỪNG
+"
+
+[node name="BtnResume" type="Button" parent="UILayer/MenuBoard/VBoxContainer" unique_id=1818467994]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_efxa6")
+theme_override_font_sizes/font_size = 30
+text = "Tiếp tục"
+
+[node name="BtnRestart" type="Button" parent="UILayer/MenuBoard/VBoxContainer" unique_id=1877287990]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_efxa6")
+theme_override_font_sizes/font_size = 30
+text = "Chơi lại"
+
+[node name="BtnQuit" type="Button" parent="UILayer/MenuBoard/VBoxContainer" unique_id=1745516883]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_efxa6")
+theme_override_font_sizes/font_size = 30
+text = "Thoát ra
+"
+
+[node name="ScoreLabel" type="Label" parent="UILayer" unique_id=1169415120]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -74.0
+offset_top = 19.0
+offset_right = 74.0
+offset_bottom = 74.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("5_efxa6")
+theme_override_font_sizes/font_size = 40
+text = "Hoa: 0"
+
+[node name="SfxAnHoaTim" type="AudioStreamPlayer" parent="." unique_id=191170576]
+stream = ExtResource("6_5vw27")
+volume_db = -15.0
+
+[node name="SfxAnBom" type="AudioStreamPlayer" parent="." unique_id=716458858]
+stream = ExtResource("7_kek77")
+volume_db = -10.0
+
+[node name="SfxAnBom2" type="AudioStreamPlayer" parent="." unique_id=1300006733]
+stream = ExtResource("7_kek77")
+volume_db = 10.0
+
+[node name="SfxChet" type="AudioStreamPlayer" parent="." unique_id=517306618]
+stream = ExtResource("8_4c57u")
+
+[node name="SfxMissing" type="AudioStreamPlayer" parent="." unique_id=1082482952]
+stream = ExtResource("9_kek77")
+
+[node name="SfxClick" type="AudioStreamPlayer" parent="." unique_id=1384788616]
+stream = ExtResource("10_4c57u")
+volume_db = -5.0
+
+[node name="BgmOcean" type="AudioStreamPlayer" parent="." unique_id=1705200588]
+stream = ExtResource("12_dg77c")
+volume_db = -5.0
+
+[connection signal="area_entered" from="Basket" to="Basket" method="_on_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="UILayer/BtnPause" to="." method="_on_btn_pause_pressed"]
+[connection signal="pressed" from="UILayer/MenuBoard/VBoxContainer/BtnResume" to="." method="_on_btn_resume_pressed"]
+[connection signal="pressed" from="UILayer/MenuBoard/VBoxContainer/BtnRestart" to="." method="_on_btn_restart_pressed"]
+[connection signal="pressed" from="UILayer/MenuBoard/VBoxContainer/BtnQuit" to="." method="_on_btn_quit_pressed"]
